@@ -27,10 +27,12 @@ li a{
   padding: 14px 16px;
 }
 
-select{
+select.index{
+  margin-top:2rem;
   font-size: 1.2rem;
-  width:30rem;
+  width:32rem;
   height:3rem;
+  border-radius: 5px;
 }
 
 .container{
@@ -39,8 +41,9 @@ select{
   justify-content: center;
   overflow:hidden;
   margin:0 auto; /*容器置中必寫這行，因為div預設是block(會佔據整行)，因此寫這行將margin上下設為0,左右平分 */
-  width:30rem;
-  padding:0;
+  width:32rem;
+  padding:10px;
+  border-radius: 10px;
 }
 
 
@@ -51,7 +54,7 @@ select{
 
 i{
   padding-right: 1rem;
-  padding-left: 1rem;
+  padding-left: 2rem;
   margin-bottom:0;
   font-size: 3.5em;
 }
@@ -60,14 +63,13 @@ i{
   display: flex;
   align-items: center;
   background-color: aliceblue;
-  margin-bottom:2rem;
+  margin-bottom:10px;
 }
 
 .details{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  
 }
 
 .details h2{
@@ -82,10 +84,11 @@ i{
 
 .price{
   margin-left: auto;
-  padding-right: 1rem;
+  padding-right: 2rem;
 }
 
 .addBtn{
+  text-decoration: none;
   font-size: 1.2rem;
   color: white;
   background-color:rgb(247, 163, 38);
@@ -93,9 +96,51 @@ i{
   border-radius: 5px;
   padding: 10px 50px;
   margin: 0 auto;
+  margin-bottom: 10rem;
+  transition: 0.5s;
 }
 
 .addBtn:hover{
   cursor: pointer;
   color:black;
+}
+
+.reminder{
+  display: flex;
+}
+
+#containerCreate{
+  background-color: peachpuff;
+  align-items: center;
+}
+
+.reminder h6{
+  margin-right: 50px;
+}
+
+.formCreate div{
+  margin: 2rem;
+}
+
+.indexButtons{
+  display: inline;
+}
+
+.indexButtons a {
+  text-decoration: none;
+  color:white;
+  size: 2rem;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 5px;
+  background-color: rgb(183, 192, 224);
+}
+
+.indexButtons a:hover{
+  color:rgb(0, 0, 0);
+}
+
+.row{
+  display: flex;
+  justify-content: center;
 }

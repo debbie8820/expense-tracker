@@ -1,11 +1,12 @@
 <div class="container">
-  <form class="dropdown" action="">
-    <select name="category" id="category">
-      <option value="家用開銷">家用開銷</option>
-      <option value="交通">交通</option>
-      <option value="休閒娛樂">休閒娛樂</option>
-      <option value="餐飲">餐飲</option>
-      <option value="其它">其它</option>
+  <form class="dropdown" action="/filter" method="">
+    <select class="index" onchange="this.form.submit()" name="category" id="category">
+      <option value="filter..." selected disabled>篩選支出項目...</option>
+      <option {{#if (eq cat "home" )}}selected{{/if}} value="home">家用開銷</option>
+      <option {{#if (eq cat "shuttle-van" )}}selected{{/if}} value="shuttle-van">交通</option>
+      <option {{#if (eq cat "laugh-squint" )}}selected{{/if}} value="laugh-squint">休閒娛樂</option>
+      <option {{#if (eq cat "utensils" )}}selected{{/if}} value="utensils">餐飲</option>
+      <option {{#if (eq cat "pen" )}}selected{{/if}} value="pen">其它</option>
     </select>
   </form>
   <div class="totalAmount">
@@ -13,17 +14,28 @@
       <h2>總金額：</h2>
     </div>
     <div class="totalNumber">
-      <h1><b>$ 25260</b></h1>
+      <h1><b>$ {{totalReturn}}</b></h1>
     </div>
   </div>
-  <div class="info">
-    <span><i class="fas fa-utensils fa-3x"></i></span>
+  <div id="infoContainer">
+    <div class="row" {{#if records}}style="display: none;" {{/if}}>
+      <h2>找不到符合所選類別的支出</h2>
+    </div>
+    {{#each records}}
+    <div id="info" class="info">
+      <span><i class="fas fa-{{this.category}} fa-3x"></i></span>
+      <div class="details">
+        <h2>{{this.name}}</h2>
+        <h4>{{simplifyTime this.date}}</h4>
+      </div>
+      <h2 class="price">{{this.amount}}</h2>
+      <div class="indexButtons">
+        <a class="editBtn" href="/records/{{this._id}}/edit"><b>修改</b></a>
+        <a class="delBtn" href="/records/{{this._id}}/delete"><b>刪除</b></a>
+      </div>
+    </div>
+    {{/each}}
+  </div>
 
-    <div class="details">
-      <h2>午餐</h2>
-      <h4>2021/05/23</h4>
-    </div>
-    <h2 class="price">$ 60</h2>
-  </div>
-  <button class="addBtn"><b>新增支出</b></button>
+  <a href="/records/create" class="addBtn"><b>新增支出</b></a>
 </div>
