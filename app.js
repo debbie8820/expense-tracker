@@ -11,21 +11,10 @@ require('./config/mongoose')
 const app = express()
 
 
-
-
 app.engine('hbs', exphbs({
   defaultLayout: 'main',
   extname: '.hbs',
   helpers: {
-    total: function (amount) {
-      let total = 0
-      total += amount
-      console.log(total)
-    },
-    totalReturn: function () {
-      let total = 0
-      return total
-    },
     simplifyTime: function (time) {
       const newTime = moment(time).format('YYYY-MM-DD')
       return newTime
@@ -34,21 +23,27 @@ app.engine('hbs', exphbs({
       return v1 === v2
     }
   }
-})
-)
+}))
 
 app.set('view engine', 'hbs')
 
 app.use(express.static('public'))
 app.use(bodyParser.urlencoded({ extended: true }))
 
+function total(records) {
+  let total = 0
+  records.map((record) => {
+    total += record.amount
+  })
+  return total
+}
 
 app.get('/', (req, res) => {
-  let total = 0
   Records.find()
     .lean()
     .then((records) => {
-      res.render('index', { records })
+      const totalAmount = total(records).toLocaleString()
+      res.render('index', { records, totalAmount })
     })
     .catch(error => console.log(error))
 })
@@ -71,7 +66,6 @@ app.get('/records/:id/edit', (req, res) => {
   Records.findById(id)
     .lean()
     .then(record => {
-      console.log(record)
       res.render('edit', { record })
     })
     .catch(error => console.log(error))
@@ -94,7 +88,7 @@ app.post('/records/:id/edit', (req, res) => {
 })
 
 //delete record
-app.get('/records/:id/delete', (req, res) => {
+app.post('/records/:id/delete', (req, res) => {
   const id = req.params.id
   Records.findById(id)
     .then((record) => {
@@ -110,13 +104,11 @@ app.get('/filter', (req, res) => {
   Records.find({ category: cat })
     .lean()
     .then((records) => {
-      res.render('index', { records, cat })
+      const totalAmount = total(records).toLocaleString()
+      res.render('index', { records, cat, totalAmount })
     })
     .catch(error => console.log(error))
 })
-
-
-
 
 
 app.listen(3000, () => {

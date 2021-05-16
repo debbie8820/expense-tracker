@@ -1,19 +1,19 @@
-<div id="containerCreate" class="container">
-  <div class="reminder">
-    <h6>*必填欄位</h6>
+<div class="containerCreate container">
+  <div class="reminderEdit">
     <h2>請更改你的支出</h2>
+    <h6>*必填欄位</h6>
   </div>
-  <form class="formEdit" action="./edit" method="POST">
-    <div>
-      <label for="name">名稱*:</label>
+  <form class="formCreate" action="./edit" method="POST">
+    <div class="infoCreate">
+      <label for="name">名稱*</label>
       <input type="text" name="name" id="name" value="{{record.name}}" required>
     </div>
-    <div>
-      <label for="date">日期*:</label>
+    <div class="infoCreate">
+      <label for="date">日期*</label>
       <input type="date" name="date" id="date" value="{{simplifyTime record.date}}" required>
     </div>
-    <div>
-      <label for="category">類別*:</label>
+    <div class="infoCreate">
+      <label for="category">類別*</label>
       <select name="category" id="category" required>
         <option {{#if (eq record.category home)}}selected{{/if}} value="home">家用開銷</option>
         <option {{#if (eq record.category shuttle-van)}}selected{{/if}} value="shuttle-van">交通</option>
@@ -22,10 +22,10 @@
         <option {{#if (eq record.category pen)}}selected{{/if}} value="pen">其它</option>
       </select>
     </div>
-    <div>
-      <label for="amount">金額*:</label>
+    <div class="infoCreate">
+      <label for="amount">金額*</label>
       <input type="number" name="amount" id="amount" min="1" value={{record.amount}} required>
     </div>
-    <input type="submit" value="更新支出">
+    <input class="doneBtn" type="submit" value="更新支出">
   </form>
 </div>

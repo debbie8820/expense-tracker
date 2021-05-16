@@ -1,31 +1,33 @@
-<div id="containerCreate" class="container">
-  <div class="reminder">
-    <h6>*必填欄位</h6>
-    <h2>請輸入你的支出</h2>
+<div class="containerCreate container">
+  <div class="infowrap">
+    <div class="reminder">
+      <h2>請輸入你的支出</h2>
+      <h6>*必填欄位</h6>
+    </div>
+    <form class="formCreate" action="./created" method="POST">
+      <div class="infoCreate">
+        <label for="name">名稱*</label>
+        <input type="text" name="name" id="name" required>
+      </div>
+      <div class="infoCreate">
+        <label for="date">日期*</label>
+        <input type="date" name="date" id="date" required>
+      </div>
+      <div class="infoCreate">
+        <label for="category">類別*</label>
+        <select name="category" id="category" required>
+          <option value="home">家用開銷</option>
+          <option value="shuttle-van">交通</option>
+          <option value="laugh-squint">休閒娛樂</option>
+          <option value="utensils">餐飲</option>
+          <option value="pen">其它</option>
+        </select>
+      </div>
+      <div class="infoCreate">
+        <label for="amount">金額*</label>
+        <input type="number" name="amount" id="amount" min="1" required>
+      </div>
+      <input class="newBtn" type="submit" value="新增支出">
+    </form>
   </div>
-  <form class="formCreate" action="./created" method="POST">
-    <div>
-      <label for="name">名稱*:</label>
-      <input type="text" name="name" id="name" required>
-    </div>
-    <div>
-      <label for="date">日期*:</label>
-      <input type="date" name="date" id="date" required>
-    </div>
-    <div>
-      <label for="category">類別*:</label>
-      <select name="category" id="category" required>
-        <option value="home">家用開銷</option>
-        <option value="shuttle-van">交通</option>
-        <option value="laugh-squint">休閒娛樂</option>
-        <option value="utensils">餐飲</option>
-        <option value="pen">其它</option>
-      </select>
-    </div>
-    <div>
-      <label for="amount">金額*:</label>
-      <input type="number" name="amount" id="amount" min="1" required>
-    </div>
-    <input type="submit" value="新增支出">
-  </form>
 </div>

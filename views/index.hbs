@@ -1,4 +1,9 @@
 <div class="container">
+
+  <div class="totalNumber">
+    <h1><b>${{totalAmount}}</b></h1>
+  </div>
+
   <form class="dropdown" action="/filter" method="">
     <select class="index" onchange="this.form.submit()" name="category" id="category">
       <option value="filter..." selected disabled>篩選支出項目...</option>
@@ -9,32 +14,32 @@
       <option {{#if (eq cat "pen" )}}selected{{/if}} value="pen">其它</option>
     </select>
   </form>
-  <div class="totalAmount">
-    <div class="totalText">
-      <h2>總金額：</h2>
-    </div>
-    <div class="totalNumber">
-      <h1><b>$ {{totalReturn}}</b></h1>
-    </div>
-  </div>
-  <div id="infoContainer">
+
+  <div class="infoContainer">
     <div class="row" {{#if records}}style="display: none;" {{/if}}>
       <h2>找不到符合所選類別的支出</h2>
     </div>
+
     {{#each records}}
-    <div id="info" class="info">
-      <span><i class="fas fa-{{this.category}} fa-3x"></i></span>
+    <div class="info">
+      <i class="fas fa-{{this.category}} fa-3x"></i>
       <div class="details">
         <h2>{{this.name}}</h2>
         <h4>{{simplifyTime this.date}}</h4>
       </div>
       <h2 class="price">{{this.amount}}</h2>
       <div class="indexButtons">
-        <a class="editBtn" href="/records/{{this._id}}/edit"><b>修改</b></a>
-        <a class="delBtn" href="/records/{{this._id}}/delete"><b>刪除</b></a>
+        <a class="editBtn" href="/records/{{this._id}}/edit"><i class="far fa-edit fa-x"></i></a>
+        <form action="/records/{{this._id}}/delete" method="POST" style="display:inline;">
+          <button class="delBtn" type="submit">
+            <i class="fas fa-trash-alt"></i>
+          </button>
+        </form>
       </div>
     </div>
     {{/each}}
+
+
   </div>
 
   <a href="/records/create" class="addBtn"><b>新增支出</b></a>

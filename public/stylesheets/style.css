@@ -1,6 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap');
+
 body{
   margin:0;
   padding: 0;
+  /* background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%); */
+  background-image: linear-gradient(-20deg, #f794a4 0%, #fdd6bd 100%);
+  background-size: cover;
+  font-family: 'PT Sans', sans-serif;
 }
 
 .navbar{
@@ -30,26 +36,37 @@ li a{
 select.index{
   margin-top:2rem;
   font-size: 1.2rem;
-  width:32rem;
+  width:30rem;
   height:3rem;
   border-radius: 5px;
+  margin-bottom: 20px;
 }
 
 .container{
   display:flex;
   flex-direction: column;
   justify-content: center;
-  overflow:hidden;
   margin:0 auto; /*容器置中必寫這行，因為div預設是block(會佔據整行)，因此寫這行將margin上下設為0,左右平分 */
-  width:32rem;
+  width:30rem;
   padding:10px;
   border-radius: 10px;
+  position: relative;
 }
 
+.totalNumber{
+  margin-top:2rem;
+  background-color: rgb(255, 167, 108);
+  border-radius: 15px;
+  box-shadow: 6px 6px 16px rgba(0,0,0,0.3);
+}
 
 .totalNumber h1{
-  font-size: 3.5rem;
-  color:rgb(250, 142, 0);
+  font-size: 6rem;
+  padding:0;
+  color:rgb(252, 246, 246);
+  text-align: center;
+  margin:0.5rem 0.5rem;
+  text-shadow: 2px 2px rgba(255,255,255,0.75);
 }
 
 i{
@@ -59,17 +76,41 @@ i{
   font-size: 3.5em;
 }
 
+.fa-home{
+  color: rgb(245, 128, 128);
+}
+
+.fa-shuttle-van{
+  color: rgb(120, 204, 120);
+}
+
+.fa-laugh-squint{
+  color: #fee140;
+}
+
+.fa-utensils{
+  color: rgb(255, 163, 78);
+}
+
+.fa-pen{
+  color: #2488e0;
+}
+
 .info{
   display: flex;
   align-items: center;
-  background-color: aliceblue;
-  margin-bottom:10px;
+  /* background-color: aliceblue; */
+  padding:10px 2px; 
 }
 
 .details{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+h2.price{
+  font-size: 1.8rem;
 }
 
 .details h2{
@@ -96,6 +137,7 @@ i{
   border-radius: 5px;
   padding: 10px 50px;
   margin: 0 auto;
+  margin-top: 2rem;
   margin-bottom: 10rem;
   transition: 0.5s;
 }
@@ -105,42 +147,173 @@ i{
   color:black;
 }
 
+
 .reminder{
   display: flex;
+  width:25rem;
 }
 
-#containerCreate{
+.reminderEdit{
+  display: flex;
+  justify-content: center;
+  width:25rem;
+  color:coral;
+  margin-top: 2rem;
+}
+
+.containerCreate{
   background-color: peachpuff;
+  opacity: 0.8;
   align-items: center;
+  margin:0 auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.infoCreate{
+  display: flex;
+  justify-content: space-between;
+  margin:2px;
+  padding:0;
+}
+
+.infoCreate label{
+  font-size: 1.2rem;
+  margin-right:3px;
+  margin-left:0;
+  height:20px;
+  text-align: left;
+}
+
+.infoCreate input{
+  font-size: 1.2rem;
+  width:75%;
+  height: 2rem;
+  margin-left: 10px;
+}
+
+.infoCreate select{
+  font-size: 1.2rem;
+  width:76%;
+  height: 2rem;
+}
+
+.reminder{
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  color: rgb(253, 143, 39);
+  display: flex;
+  justify-content:center;
+  padding: 0;
 }
 
 .reminder h6{
-  margin-right: 50px;
+  font-size: 0.5rem;
+  margin-top: 2.5rem;
+}
+
+.formCreate{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding:0;
+  margin: 0;
+}
+
+.infoCreate{
+  padding: 0;
 }
 
 .formCreate div{
   margin: 2rem;
+  padding: 0;
+}
+
+.formCreate label{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.newBtn{
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background-color:rgb(77, 130, 230);
+  border:none;
+  border-radius: 5px;
+  padding: 10px 50px;
+  margin: 0 auto;
+  margin-top: 2rem;
+  margin-bottom: 10rem;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.newBtn:hover{
+  color:black;
+  transition: 0.5s;
 }
 
 .indexButtons{
+  position: absolute;
+  right: -180px;
   display: inline;
 }
 
-.indexButtons a {
+.indexButtons button {
+  background-color: transparent;
   text-decoration: none;
-  color:white;
   size: 2rem;
-  padding: 1rem;
-  margin: 1rem;
-  border-radius: 5px;
-  background-color: rgb(183, 192, 224);
+  cursor: pointer;
+  outline: none;
+  padding-right:2rem;
+  border:none;
 }
 
-.indexButtons a:hover{
+.indexButtons i{
+  color:white;
+  padding:6px;
+}
+
+.indexButtons .editBtn i:hover{
+  transition: 0.5s;
+  color:tomato;
+}
+
+.indexButtons .delBtn i:hover{
+  transition: 0.5s;
   color:rgb(0, 0, 0);
 }
 
 .row{
   display: flex;
   justify-content: center;
+}
+
+div.infoContainer :nth-child(even).info{
+  background-color: #ffecad;
+}
+
+div.infoContainer :nth-child(odd).info{
+  background-color: #F5F5F5;
+}
+
+.doneBtn{
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background-color:coral;
+  border:none;
+  border-radius: 5px;
+  padding: 10px 50px;
+  margin: 0 auto;
+  margin-top: 2rem;
+  margin-bottom: 10rem;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.doneBtn:hover{
+  color:black;
+  transition: 0.5s;
 }
