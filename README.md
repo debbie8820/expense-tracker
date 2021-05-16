@@ -2,6 +2,8 @@
 
 An Node.js website that makes you have fun when bookkeeping
 
+<img alt="homepage" src="https://github.com/debbie8820/expense-tracker/blob/main/img/homepage.jpg">
+
 ## 主要功能
 
 - 瀏覽所有支出記錄
@@ -9,7 +11,6 @@ An Node.js website that makes you have fun when bookkeeping
 - 刪除單筆支出
 - 編輯單筆支出
 - 點選導覽列的「家庭記帳本」可以返回首頁
-
 
 ## 建置環境
 
