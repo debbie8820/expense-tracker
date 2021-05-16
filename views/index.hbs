@@ -30,7 +30,7 @@
       <h2 class="price">{{this.amount}}</h2>
       <div class="indexButtons">
         <a class="editBtn" href="/records/{{this._id}}/edit"><i class="far fa-edit fa-x"></i></a>
-        <form action="/records/{{this._id}}/delete" method="POST" style="display:inline;">
+        <form action="/records/{{this._id}}?_method=DELETE" method="POST" style="display:inline;">
           <button class="delBtn" type="submit">
             <i class="fas fa-trash-alt"></i>
           </button>
