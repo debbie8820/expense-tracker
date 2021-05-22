@@ -16,6 +16,7 @@ router.get('/', (req, res) => {
   Records.find({ category: cat })
     .lean()
     .then((records) => {
+      console.log(records)
       const totalAmount = total(records).toLocaleString()
       res.render('index', { records, cat, totalAmount })
     })
