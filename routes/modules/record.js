@@ -32,6 +32,7 @@ router.put('/:id', (req, res) => {
       record.date = req.body.date
       record.category = req.body.category
       record.amount = req.body.amount
+      record.merchant = req.body.merchant
       return record.save()
     })
     .then(() => {

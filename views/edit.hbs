@@ -15,16 +15,20 @@
     <div class="infoCreate">
       <label for="category">類別*</label>
       <select name="category" id="category" required>
-        <option {{#if (eq record.category home)}}selected{{/if}} value="home">家用開銷</option>
-        <option {{#if (eq record.category shuttle-van)}}selected{{/if}} value="shuttle-van">交通</option>
-        <option {{#if (eq record.category laugh-squint)}}selected{{/if}} value="laugh-squint">休閒娛樂</option>
-        <option {{#if (eq record.category utensils)}}selected{{/if}} value="utensils">餐飲</option>
-        <option {{#if (eq record.category pen)}}selected{{/if}} value="pen">其它</option>
+        <option {{#if (eq record.category "home" )}}selected{{/if}} value="home">家用開銷</option>
+        <option {{#if (eq record.category "shuttle-van" )}}selected{{/if}} value="shuttle-van">交通</option>
+        <option {{#if (eq record.category "laugh-squint" )}}selected{{/if}} value="laugh-squint">休閒娛樂</option>
+        <option {{#if (eq record.category "utensils" )}}selected{{/if}} value="utensils">餐飲</option>
+        <option {{#if (eq record.category "pen" )}}selected{{/if}} value="pen">其它</option>
       </select>
     </div>
     <div class="infoCreate">
       <label for="amount">金額*</label>
       <input type="number" name="amount" id="amount" min="1" value={{record.amount}} required>
+    </div>
+    <div class="infoCreate">
+      <label for="merchant">店家</label>
+      <input type="text" name="merchant" id="merchant" value={{record.merchant}}>
     </div>
     <input class="doneBtn" type="submit" value="更新支出">
   </form>

@@ -3,13 +3,15 @@
     "name": "狗狗手術開刀",
     "category": "pen",
     "date": "2021-05-11",
-    "amount": 81930
+    "amount": 81930,
+    "merchant": "小王子動物醫院"
   },
   {
-    "name": "王品慶祝母親節",
+    "name": "慶祝母親節",
     "category": "utensils",
     "date": "2020-05-10",
-    "amount": 1300
+    "amount": 1300,
+    "merchant": "王品"
   },
   {
     "name": "悠遊卡加值",
@@ -21,7 +23,8 @@
     "name": "澎湖遊",
     "category": "laugh-squint",
     "date": "2021-05-02",
-    "amount": 15000
+    "amount": 15000,
+    "merchant": "旅行社"
   },
   {
     "name": "泡麵",
