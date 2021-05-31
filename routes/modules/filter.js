@@ -12,6 +12,8 @@ function total(records) {
 
 //filter
 router.get('/', (req, res) => {
+  const month = req.query.month
+  console.log(month)
   const cat = req.query.category
   Records.find({ category: cat })
     .lean()

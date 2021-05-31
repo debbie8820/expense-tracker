@@ -33,13 +33,19 @@ li a{
   padding: 14px 16px;
 }
 
-select.index{
-  margin-top:2rem;
+form.homepage{
+  display: inline-block;
+}
+
+.selector{
+  margin-top:0.5rem;
   font-size: 1.2rem;
-  width:30rem;
+  width:14rem;
   height:3rem;
   border-radius: 5px;
   margin-bottom: 20px;
+  cursor: pointer;
+  border: 1px black solid;
 }
 
 .container{
@@ -53,7 +59,17 @@ select.index{
   position: relative;
 }
 
+.form-wrapper{
+  display: flex;
+  justify-content: space-between;
+}
+
 .totalNumber{
+  margin:0 auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  min-width: 30rem;
+  width:fit-content;
   margin-top:2rem;
   background-color: rgb(255, 167, 108);
   border-radius: 15px;
@@ -62,11 +78,11 @@ select.index{
 
 .totalNumber h1{
   font-size: 6rem;
-  padding:0;
+  padding:5px 30px;
   color:rgb(252, 246, 246);
-  text-align: center;
-  margin:0.5rem 0.5rem;
+  margin:0.5rem;
   text-shadow: 2px 2px rgba(255,255,255,0.75);
+  text-align: center;
 }
 
 i{
