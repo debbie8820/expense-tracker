@@ -44,8 +44,22 @@ form.homepage{
   height:3rem;
   border-radius: 5px;
   margin-bottom: 20px;
-  cursor: pointer;
   border: 1px black solid;
+}
+
+#category{
+  cursor: pointer;
+}
+
+input[type="month"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  border-radius: 4px;
+  margin-right: 4px;
+  opacity: 0.6;
+}
+
+input[type="month"]::-webkit-calendar-picker-indicator:hover {
+  opacity: 1
 }
 
 .container{

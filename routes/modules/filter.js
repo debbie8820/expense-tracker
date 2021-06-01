@@ -10,17 +10,24 @@ function total(records) {
   return total
 }
 
-//filter
 router.get('/', (req, res) => {
   const month = req.query.month
-  console.log(month)
-  const cat = req.query.category
-  Records.find({ category: cat })
+  const cat = req.query.category ? req.query.category : { $ne: '' }
+  if (!month) { //沒有選擇月份:只進行類別篩選
+    return Records.find({ category: cat })
+      .lean()
+      .then((records) => {
+        const totalAmount = total(records).toLocaleString()
+        res.render('index', { records, totalAmount, cat })
+      })
+      .catch(error => console.log(error))
+  }
+
+  return Records.find({ $where: `this.date.toJSON().slice(0, 7) == "${month}"`, category: cat })
     .lean()
     .then((records) => {
-      console.log(records)
       const totalAmount = total(records).toLocaleString()
-      res.render('index', { records, cat, totalAmount })
+      res.render('index', { records, totalAmount, month, cat })
     })
     .catch(error => console.log(error))
 })

@@ -3,24 +3,23 @@
 </div>
 
 <div class="container">
-  <div class="form-wrapper">
-    <form class="homepage" action="/filter">
-      <input class="month selector" type="month" id="month" name="month" min="2019-01" value="選取月份"
-        onchange="this.form.submit()">
-    </form>
 
-    <form class="dropdown homepage" action="/filter">
+  <form class="homepage" action="/filter">
+    <div class="form-wrapper">
+      <input class="month selector" type="month" id="month" name="month" min="2020-01" max="2022-12" value="{{month}}"
+        onchange="this.form.submit()">
+
       <select class="selector" onchange="this.form.submit()" name="category" id="category">
         <option value="filter..." selected disabled>篩選支出項目...</option>
+        <option {{#if (eq cat "" )}}selected{{/if}} value="">全部</option>
         <option {{#if (eq cat "home" )}}selected{{/if}} value="home">家用開銷</option>
         <option {{#if (eq cat "shuttle-van" )}}selected{{/if}} value="shuttle-van">交通</option>
         <option {{#if (eq cat "laugh-squint" )}}selected{{/if}} value="laugh-squint">休閒娛樂</option>
         <option {{#if (eq cat "utensils" )}}selected{{/if}} value="utensils">餐飲</option>
         <option {{#if (eq cat "pen" )}}selected{{/if}} value="pen">其它</option>
       </select>
-    </form>
-  </div>
-
+    </div>
+  </form>
 
   <div class="infoContainer">
     <div class="row" {{#if records}}style="display: none;" {{/if}}>
