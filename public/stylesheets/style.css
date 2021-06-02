@@ -3,7 +3,6 @@
 body{
   margin:0;
   padding: 0;
-  /* background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%); */
   background-image: linear-gradient(-20deg, #f794a4 0%, #fdd6bd 100%);
   background-size: cover;
   font-family: 'PT Sans', sans-serif;
@@ -269,20 +268,21 @@ h2.price{
 .newBtn{
   font-size: 1.2rem;
   font-weight: bold;
-  color: white;
-  background-color:rgb(77, 130, 230);
-  border:none;
+  color: rgb(60, 127, 253);
+  background-color:white;
   border-radius: 5px;
   padding: 10px 50px;
   margin: 0 auto;
   margin-top: 2rem;
-  margin-bottom: 10rem;
+  margin-bottom: 2rem;
   transition: 0.5s;
   cursor: pointer;
+  border:2px solid rgb(60, 127, 253);
 }
 
 .newBtn:hover{
-  color:black;
+  color:white;
+  background-color:rgb(60, 127, 253);
   transition: 0.5s;
 }
 
@@ -340,7 +340,7 @@ div.infoContainer :nth-child(odd).info{
   padding: 10px 50px;
   margin: 0 auto;
   margin-top: 2rem;
-  margin-bottom: 10rem;
+  margin-bottom: 2rem;
   transition: 0.5s;
   cursor: pointer;
 }
