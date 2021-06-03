@@ -350,7 +350,6 @@ div.infoContainer :nth-child(odd).info{
   transition: 0.5s;
 }
 
-/* bootstrap: Helvetica Neue */
 .card {
   margin:35px auto;
   width: 40vw;
@@ -369,7 +368,6 @@ div.infoContainer :nth-child(odd).info{
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
-/* Add some padding inside the card container */
 .cardContainer {
   padding: 2px 16px;
 }
