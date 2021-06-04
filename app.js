@@ -4,6 +4,7 @@ const moment = require('moment')
 const bodyParser = require('body-parser')
 const methodOverride = require('method-override')
 const session = require('express-session')
+const usePassport = require('./config/passport')
 require('./config/mongoose')
 
 const PORT = process.env.PORT || 3000
@@ -34,7 +35,7 @@ app.use(session({
   resave: false,
   saveUninitialized: true
 }))
-
+usePassport(app)
 app.use(express.static('public'))
 app.use(methodOverride('_method'))
 app.use(routes)

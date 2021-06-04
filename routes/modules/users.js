@@ -2,14 +2,16 @@ const express = require('express')
 const router = express.Router()
 const User = require('../../models/Users')
 const bcrypt = require('bcryptjs')
+const passport = require('passport')
 
 router.get('/login', (req, res) => {
   res.render('login')
 })
 
-router.post('login', (req, res) => {
-  res.render('login')
-})
+router.post('/login', passport.authenticate('local', {
+  failureRedirect: '/users/login',
+  successRedirect: '/'
+}))
 
 router.get('/register', (req, res) => {
   res.render('register')
@@ -40,7 +42,7 @@ router.post('/register', (req, res) => {
           })
         })
     })
-    .then(() => res.redirect('/')) //記得加上req.flash(你已成功註冊)
+    .then(() => res.redirect('/users/login')) //記得加上req.flash(你已成功註冊)
     .catch(err => console.log(err)) //需改寫:將錯誤傳給使用者
 })
 
