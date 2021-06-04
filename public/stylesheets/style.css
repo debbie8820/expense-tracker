@@ -13,6 +13,11 @@ body{
   margin-bottom:1rem;
 }
 
+.navbar ul{
+  display: flex;
+  justify-content: space-between;
+}
+
 ul {
   list-style: none;
   overflow: hidden;
@@ -20,16 +25,26 @@ ul {
   padding: 0;
 }
 
-li{
-  float: left;
-}
-
 li a{
   color: white;
   font-size: 1.2rem;
   display: block;
   text-decoration: none;
-  padding: 14px 16px;
+  padding: 6px 8px;
+  margin:0.5rem;
+}
+
+.logoutBtn{
+  border:1px solid white;
+  ;
+  margin-right: 1rem;
+  border-radius: 5px;
+}
+
+.logoutBtn:hover{
+  background-color: white;
+  color:black;
+  transition: 0.5s;
 }
 
 form.homepage{
