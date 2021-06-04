@@ -3,6 +3,8 @@ const exphbs = require('express-handlebars')
 const moment = require('moment')
 const bodyParser = require('body-parser')
 const methodOverride = require('method-override')
+const session = require('express-session')
+const usePassport = require('./config/passport')
 require('./config/mongoose')
 
 const PORT = process.env.PORT || 3000
@@ -28,7 +30,12 @@ app.engine('hbs', exphbs({
 }))
 
 app.set('view engine', 'hbs')
-
+app.use(session({
+  secret: 'debbieSecret',
+  resave: false,
+  saveUninitialized: true
+}))
+usePassport(app)
 app.use(express.static('public'))
 app.use(methodOverride('_method'))
 app.use(routes)

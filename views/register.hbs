@@ -1,0 +1,35 @@
+<div class="card">
+  <h1>Register</h1>
+  <div class="cardContainer">
+    <form action="/users/register" method="POST">
+      <div class="inputBlock">
+        <label for="name">*Name</label>
+        <input class="inputField" type="text" id="name" name="name" placeholder="Enter Name" value="{{name}}" required>
+      </div>
+      <div class="inputBlock">
+        <label for="email">*Email</label>
+        <input class="inputField" type="email" id="email" name="email" placeholder="Enter Email" value="{{email}}"
+          required>
+      </div>
+      <div class="inputBlock">
+        <label for="password">*Password</label>
+        <input class="inputField" type="password" id="password" name="password" placeholder="Enter Password"
+          value="{{password}}" required>
+      </div>
+      <div class="inputBlock">
+        <label for="confirmPassword">*Confirm password</label>
+        <input class="inputField" type="password" id="confirmPassword" name="confirmPassword"
+          placeholder="Enter Password" value="{{confirmPassword}}" required>
+      </div>
+
+      <div class="btnWrapper">
+        <input class="inputBtn" type="submit" value="Register">
+        <a class="fb" href="/auth/facebook">Facebook</a>
+        <p class="otherOption">
+          Have an account? <a class="remind_msg" href="/users/login">Login</a>
+        </p>
+      </div>
+  </div>
+  </form>
+</div>
+</div>

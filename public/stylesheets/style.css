@@ -349,3 +349,103 @@ div.infoContainer :nth-child(odd).info{
   color:black;
   transition: 0.5s;
 }
+
+.card {
+  margin:35px auto;
+  width: 40vw;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+  background-color: rgb(255, 251, 242);
+  border: 1px solid rgb(173, 173, 173)
+}
+
+.card h1 {
+  text-align: center;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.cardContainer {
+  padding: 2px 16px;
+}
+
+.cardContainer .inputField{
+  display: block;
+  width: 95%;
+  height: 2rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.8rem;
+  border-radius: 5px;
+  border:1px solid #ced4da;;
+}
+
+.inputBtn{
+  display: block;
+  width: 95%;
+  height: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 5px;
+  font-size: 1.05rem;
+  border-radius: 5px;
+  font-weight: bold;
+  color: white;
+  background-color: rgb(255, 112, 56);
+  cursor: pointer;
+  border:none;
+}
+
+.inputBtn:hover{
+  background-color: rgb(241, 83, 20);
+  transition: 0.3s;
+}
+
+.fb{
+  width: 95%;
+  display: block;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color:white;
+  background-color: #1877F2;
+  border-radius: 5px;
+  text-align: center;
+  height: 1.5rem;
+  width: 95%;
+  cursor: pointer;
+  margin-top: 2px;
+  text-decoration: none;
+  padding-top:3px;
+  padding-bottom:3px;
+}
+
+.fb:hover{
+  background-color:#0062e2;
+  transition: 0.3s;
+}
+
+.remind_msg{
+  text-decoration: none;
+  display: inline;
+  color: #2488e0;
+}
+
+.remind_msg:hover{
+  color:#006ece;
+}
+
+.btnWrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.otherOption{
+  margin-top: 0.7rem;
+}
+
+.inputBlock{
+  margin-left: 0.8rem;
+}
