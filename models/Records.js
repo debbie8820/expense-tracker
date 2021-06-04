@@ -23,6 +23,13 @@ const recordSchema = new Schema({
     required: true
   },
 
+  userId: {
+    type: Schema.Types.ObjectId,
+    ref: 'User',
+    index: true,
+    required: true
+  },
+
   merchant: String
 
 })

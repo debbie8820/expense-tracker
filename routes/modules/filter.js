@@ -11,19 +11,15 @@ function total(records) {
 }
 
 router.get('/', (req, res) => {
+  const userId = req.user._id
   const month = req.query.month
-  const cat = req.query.category ? req.query.category : { $ne: '' }
-  if (!month) { //沒有選擇月份:只進行類別篩選
-    return Records.find({ category: cat })
-      .lean()
-      .then((records) => {
-        const totalAmount = total(records).toLocaleString()
-        res.render('index', { records, totalAmount, cat })
-      })
-      .catch(error => console.log(error))
-  }
+  const formatMonth = month ? new Date(month) : null
+  const nextMonth = formatMonth ? new Date(new Date(month).setMonth(new Date(month).getMonth() + 1)) : null
 
-  return Records.find({ $where: `this.date.toJSON().slice(0, 7) == "${month}"`, category: cat })
+  const cat = req.query.category ? req.query.category : { $ne: '' } //若沒有選擇類別則篩出所有類別
+  const dateQuery = month ? { $gte: formatMonth, $lt: nextMonth } : { $ne: '' } //若沒有選擇月份則篩出所有月份
+
+  return Records.find({ date: dateQuery, category: cat, userId })
     .lean()
     .then((records) => {
       const totalAmount = total(records).toLocaleString()

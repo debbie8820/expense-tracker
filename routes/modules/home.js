@@ -11,7 +11,8 @@ function total(records) {
 }
 
 router.get('/', (req, res) => {
-  Records.find()
+  const userId = req.user._id
+  Records.find({ userId })
     .lean()
     .then((records) => {
       const totalAmount = total(records).toLocaleString()
