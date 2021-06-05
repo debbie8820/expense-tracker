@@ -1,10 +1,10 @@
 [
   {
-    "name": "狗狗手術開刀",
+    "name": "手術開刀",
     "category": "pen",
-    "date": "2021-05-11",
+    "date": "2021-03-11",
     "amount": 81930,
-    "merchant": "小王子動物醫院"
+    "merchant": "台大醫院"
   },
   {
     "name": "慶祝母親節",
@@ -16,20 +16,42 @@
   {
     "name": "悠遊卡加值",
     "category": "shuttle-van",
-    "date": "2021-05-09",
-    "amount": 200
+    "date": "2021-04-09",
+    "amount": 200,
+    "merchant": "全家"
   },
   {
     "name": "澎湖遊",
     "category": "laugh-squint",
-    "date": "2021-05-02",
+    "date": "2021-01-24",
     "amount": 15000,
     "merchant": "旅行社"
   },
   {
     "name": "泡麵",
     "category": "home",
-    "date": "2021-05-14",
-    "amount": 120
+    "date": "2021-03-14",
+    "amount": 120,
+    "merchant": "7-11"
+  },
+  {
+    "name": "花蓮車票",
+    "category": "shuttle-van",
+    "date": "2021-05-09",
+    "amount": 420
+  },
+  {
+    "name": "電影:神力女超人",
+    "category": "laugh-squint",
+    "date": "2020-09-02",
+    "amount": 780,
+    "merchant": "華納威秀"
+  },
+  {
+    "name": "衛生紙",
+    "category": "home",
+    "date": "2021-04-14",
+    "amount": 299,
+    "merchant": "全聯"
   }
 ]
