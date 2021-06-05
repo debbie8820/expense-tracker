@@ -76,6 +76,17 @@ input[type="month"]::-webkit-calendar-picker-indicator:hover {
   opacity: 1
 }
 
+input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  border-radius: 4px;
+  margin-right: 4px;
+  opacity: 0.6;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator:hover {
+  opacity: 1
+}
+
 .container{
   display:flex;
   flex-direction: column;
@@ -114,7 +125,8 @@ input[type="month"]::-webkit-calendar-picker-indicator:hover {
 }
 
 i{
-  padding-right: 1rem;
+  width:48px;
+  padding-right: 1.5rem;
   padding-left: 2rem;
   margin-bottom:0;
   font-size: 3.5em;
