@@ -1,12 +1,13 @@
 # Expense-tracker
 
-An Node.js website that makes you have fun when bookkeeping
+An Node.js website that makes you have fun when bookkeeping<br>
 :point_right:[點我體驗網站! Click me ](https://mighty-atoll-44743.herokuapp.com/)
 
-<img alt="homepage" src="https://github.com/debbie8820/expense-tracker/blob/main/img/homepage.jpg">
+<img alt="homepage" src="https://github.com/debbie8820/expense-tracker/blob/main/img/home.jpg">
 
 ### :fire:新功能
 <img alt="homepage" src="https://github.com/debbie8820/expense-tracker/blob/main/img/login.jpg">
+
 + 加入使用者認證功能
 + 加入月份篩選功能
 + 加入「商家」欄位到支出明細中
@@ -73,7 +74,7 @@ An Node.js website that makes you have fun when bookkeeping
    信箱: user2@example.com
    密碼: 12345678
    ```
-   
+
 ## 開發者
 
 Debbie Chang
