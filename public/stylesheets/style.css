@@ -155,7 +155,6 @@ i{
 .info{
   display: flex;
   align-items: center;
-  /* background-color: aliceblue; */
   padding:10px 2px; 
 }
 
@@ -188,7 +187,7 @@ h2.price{
   text-decoration: none;
   font-size: 1.2rem;
   color: white;
-  background-color:rgb(247, 163, 38);
+  background-color:rgb(247, 176, 71);
   border:none;
   border-radius: 5px;
   padding: 10px 50px;
@@ -196,6 +195,7 @@ h2.price{
   margin-top: 2rem;
   margin-bottom: 10rem;
   transition: 0.5s;
+  box-shadow: 6px 6px 16px rgba(0,0,0,0.2);
 }
 
 .addBtn:hover{
@@ -203,17 +203,12 @@ h2.price{
   color:black;
 }
 
-
-.reminder{
-  display: flex;
-  width:25rem;
-}
-
 .reminderEdit{
   display: flex;
   justify-content: center;
   width:25rem;
-  color:coral;
+  color:rgb(10, 5, 5);
+  font-weight: bold;
   margin-top: 2rem;
 }
 
@@ -224,10 +219,13 @@ h2.price{
   margin:0 auto;
   margin-top: 2rem;
   margin-bottom: 2rem;
+  box-shadow: 6px 6px 16px rgba(0,0,0,0.3);
 }
 
 .newContainer{
-  background-color: rgb(230, 116, 116);
+  background-color: rgb(252, 234, 183);
+  border: 1px solid rgb(173,173,173);
+  box-shadow: 6px 6px 16px rgba(0,0,0,0.3);
 }
 
 .infoCreate{
@@ -257,9 +255,11 @@ h2.price{
 }
 
 .reminder{
+  display: flex;
+  width:25rem;
   font-size: 1.2rem;
   margin-top: 2rem;
-  color:white;
+  color:rgb(5, 5, 5);
   display: flex;
   justify-content:center;
   padding: 0;
@@ -295,7 +295,7 @@ h2.price{
 .newBtn{
   font-size: 1.2rem;
   font-weight: bold;
-  color: rgb(60, 127, 253);
+  color: rgb(245, 167, 94);
   background-color:white;
   border-radius: 5px;
   padding: 10px 50px;
@@ -304,12 +304,12 @@ h2.price{
   margin-bottom: 2rem;
   transition: 0.5s;
   cursor: pointer;
-  border:2px solid rgb(60, 127, 253);
+  border:2px solid rgb(245, 167, 94);
 }
 
 .newBtn:hover{
   color:white;
-  background-color:rgb(60, 127, 253);
+  background-color:rgb(245, 167, 94);
   transition: 0.5s;
 }
 
