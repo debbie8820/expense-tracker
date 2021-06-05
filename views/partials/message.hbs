@@ -1,0 +1,35 @@
+{{#if success_msg}}
+<div>
+  <div class="alert-box success">
+    {{success_msg}}
+    <span id='close' onclick='this.parentNode.style.display="none"'>x</span>
+  </div>
+</div>
+{{/if}}
+
+{{#if danger_msg}}
+<div>
+  <div class="alert-box danger">
+    {{danger_msg}}
+    <span id='close' onclick='this.parentNode.style.display="none"'>x</span>
+  </div>
+</div>
+{{/if}}
+
+{{#if warning_msg}}
+<div class="alert-box warning">
+  {{warning_msg}}
+  <span id='close' onclick='this.parentNode.style.display="none"'>x</span>
+</div>
+{{/if}}
+
+{{#if errors}}
+{{#each errors}}
+<div>
+  <div class="alert-box warning">
+    {{this.message}}
+    <span id='close' onclick='this.parentNode.style.display="none"'>x</span>
+  </div>
+</div>
+{{/each}}
+{{/if}}
