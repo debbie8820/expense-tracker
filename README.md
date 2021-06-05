@@ -1,18 +1,24 @@
 # Expense-tracker
 
 An Node.js website that makes you have fun when bookkeeping
+:point_right:[點我體驗網站! Click me ](https://mighty-atoll-44743.herokuapp.com/)
 
 <img alt="homepage" src="https://github.com/debbie8820/expense-tracker/blob/main/img/homepage.jpg">
 
-## 主要功能
+### :fire:新功能
+<img alt="homepage" src="https://github.com/debbie8820/expense-tracker/blob/main/img/login.jpg">
++ 加入使用者認證功能
++ 加入月份篩選功能
++ 加入「商家」欄位到支出明細中
 
-- 瀏覽所有支出記錄
-- 新增單筆支出
-- 刪除單筆支出
-- 編輯單筆支出
-- 點選導覽列的「家庭記帳本」可以返回首頁
+### 主要功能
++ 瀏覽所有支出記錄
++ 新增單筆支出
++ 編輯單筆支出
++ 刪除單筆支出
++ 可根據支出「類別」篩選
 
-## 建置環境
+### 建置環境
 
 - [Node.js](https://nodejs.org/en/)：14.16.1
 - [Express](https://www.npmjs.com/package/express)：4.17.1
@@ -47,7 +53,7 @@ An Node.js website that makes you have fun when bookkeeping
 4. 執行成功後，終端機會顯示下列訊息
 
    ```
-   App is running on port 3000
+   App is running on http://localhost:3000
    Mongodb is connected
    ```
 
@@ -57,7 +63,17 @@ An Node.js website that makes you have fun when bookkeeping
    http://localhost:3000
    ```
 
+6. 種子資料已建構完畢，可使用下列資訊登入：
+   ```
+   姓名：小明
+   信箱: user1@example.com
+   密碼: 12345678
 
+   姓名：小美
+   信箱: user2@example.com
+   密碼: 12345678
+   ```
+   
 ## 開發者
 
 Debbie Chang
