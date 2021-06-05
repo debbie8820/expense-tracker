@@ -8,7 +8,11 @@ const usePassport = require('./config/passport')
 const flash = require('connect-flash')
 require('./config/mongoose')
 
-const PORT = process.env.PORT || 3000
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config()
+}
+
+const PORT = process.env.PORT
 
 const routes = require('./routes')
 
@@ -32,7 +36,7 @@ app.engine('hbs', exphbs({
 
 app.set('view engine', 'hbs')
 app.use(session({
-  secret: 'debbieSecret',
+  secret: process.env.SESSION_SECRET,
   resave: false,
   saveUninitialized: true
 }))

@@ -13,7 +13,7 @@
 <body>
   <div class="navbar">
     <ul>
-      <li><a href="/"><b>{{#if isAuthenticated}}user.name{{/if}}荷包君的日常</b></a></li>
+      <li><a href="/"><b>{{#if isAuthenticated}}{{user.name}}{{/if}}荷包君的日常</b></a></li>
       {{#if isAuthenticated}}
       <li><a class="logoutBtn" href="/users/logout"><b>Logout</b></a></li>
       {{/if}}
